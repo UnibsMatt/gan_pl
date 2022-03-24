@@ -2,7 +2,12 @@ from torch.nn import Module, Sequential, LeakyReLU, Linear, Sigmoid
 
 
 class Discriminator(Module):
-    def __init__(self, in_feature):
+    def __init__(self, in_feature: int):
+        """
+        Base discriminator Module
+        Args:
+            in_feature: number of feature in input -> image rgb expected 3
+        """
         super(Discriminator, self).__init__()
 
         self.discriminator = Sequential(
